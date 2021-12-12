@@ -22,6 +22,10 @@ void myDelay(int delay_ms, unsigned long method_start_ms = -1) {
   return;
 }
 
+void recogizeController() {
+    myPush(Button::B, 500, 11);
+}
+
 // inoファイルで分割するとデフォルト引数が使えない？っぽかったので作った
 /* bool myDelayOne(int delay_ms) {
   myDelay(delay_ms);
