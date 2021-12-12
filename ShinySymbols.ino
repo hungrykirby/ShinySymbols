@@ -2,7 +2,7 @@
 #include "modules.h"
 
 void setup(){
-    myPushCount(Button::B, 500, 13);
+    myPush(Button::B, 500, 13);
 }
 void loop(){
     // loopSylveon();
