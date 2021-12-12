@@ -2,6 +2,7 @@
 #define MODULES_H
 
 void myDelay(int delay_ms, unsigned long method_start_ms = -1);
+void recogizeController();
 // bool myDelayOne(int delay_ms);
 bool myPush(Button b, int d, int count = 1);
 // bool myPushCount(Button b, int d, int count);
@@ -27,6 +28,9 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define RANKBATTLE 1
 #define SUANA 2
 #define CAMP 3
+
+#define SYLVEON 1
+#define SCIZOR 2
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 

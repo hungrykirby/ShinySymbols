@@ -1,10 +1,19 @@
 #include <auto_command_util.h>
 #include "modules.h"
 
+int pokemon = SCIZOR;
+
 void setup(){
-    myPush(Button::B, 500, 13);
+    recogizeController();
 }
 void loop(){
-    // loopSylveon();
-    loopScizor();
+    switch (pokemon) {
+        case SYLVEON:
+            loopSylveon();
+            break;
+        case SCIZOR:
+            loopScizor();
+            break;
+    }
+
 }
