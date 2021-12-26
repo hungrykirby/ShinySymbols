@@ -2,11 +2,11 @@
 #define KNEDOKO23_H
 
 class KNedoko23 {
-    public:
+public:
     KNedoko23(int pokemon);
     void loop();
 
-    private:
+private:
     void moveToInitialPlayerPosition();
     void symbolEncount();
     int symbol;
