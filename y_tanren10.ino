@@ -1,5 +1,9 @@
 #include "modules.h"
 
+// ヨロイの孤島 鍛錬平原 固定シンボル10
+// ハッサム（砂嵐）など
+// https://yakkun.com/swsh/map.htm?place=tanren
+
 // 12/11 すなあらし
 
 // 移動パート①
