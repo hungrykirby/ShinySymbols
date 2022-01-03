@@ -3,21 +3,27 @@
 #include "k_nedoko23.h"
 #include "y_tanren10.h"
 
-int target = SYLVEON;
+int target;
 
 void setup(){
     recogizeController();
+    target = SCIZOR;
 }
 void loop(){
     switch (target) {
         case SYLVEON:
-            KNedoko23 sylveon = KNedoko23(target);
-            sylveon.loop();
+            {
+                KNedoko23 sylveon = KNedoko23(target);
+                sylveon.loop();
+            }
             break;
         case SCIZOR:
-            YTanren10 scizor = YTanren10(target);
-            scizor.loop();
+            {
+                YTanren10 scizor = YTanren10(target);
+                scizor.loop();
+            }
             break;
+            
     }
 
 }
