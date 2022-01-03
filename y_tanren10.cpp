@@ -58,12 +58,15 @@ void YTanren10::symbolEncount(){
     myPush(Button::A, 200, 2);
     myPush(Button::B, 200, 5);
 
-    if(this->symbol == SCIZOR){
+    if (this->symbol == SCIZOR) {
         // 12-11 すなあらし ハッサム ＋ かがくへんかガス
         myDelay(5800);
-    }else if(this->symbol == KINGLER){
+    }else if (this->symbol == KINGLER) {
         // 1/2 雨 キングラー + かがくへんかガス
         myDelay(5400);
+    }else if (this->symbol == LUXRAY) {
+        // 12/31 雷雨 レントラー + かがくへんかガス
+        myDelay(6500);
     }else {
         myDelay(5800);
     }
