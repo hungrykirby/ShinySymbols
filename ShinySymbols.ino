@@ -7,7 +7,7 @@ int target;
 
 void setup(){
     recogizeController();
-    target = SCIZOR;
+    target = KINGLER;
 }
 void loop(){
     switch (target) {
@@ -21,6 +21,12 @@ void loop(){
             {
                 YTanren10 scizor = YTanren10(target);
                 scizor.loop();
+            }
+            break;
+        case KINGLER:
+            {
+                YTanren10 kingler = YTanren10(target);
+                kingler.loop();
             }
             break;
             
