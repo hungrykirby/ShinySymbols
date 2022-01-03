@@ -7,7 +7,7 @@ int target;
 
 void setup(){
     recogizeController();
-    target = KINGLER;
+    target = LUXRAY;
 }
 void loop(){
     switch (target) {
@@ -27,6 +27,12 @@ void loop(){
             {
                 YTanren10 kingler = YTanren10(target);
                 kingler.loop();
+            }
+            break;
+        case LUXRAY:
+            {
+                YTanren10 luxray = YTanren10(target);
+                luxray.loop();
             }
             break;
             
