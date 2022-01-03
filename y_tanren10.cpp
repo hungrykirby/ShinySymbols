@@ -3,7 +3,7 @@
 #include "y_tanren10.h"
 
 // ヨロイの孤島 鍛錬平原 固定シンボル10
-// ハッサム（砂嵐）など
+// ハッサム（砂嵐）、キングラー（雨）など
 // https://yakkun.com/swsh/map.htm?place=tanren
 
 // 12/11 すなあらし
@@ -58,8 +58,16 @@ void YTanren10::symbolEncount(){
     myPush(Button::A, 200, 2);
     myPush(Button::B, 200, 5);
 
-    // 12-11 すなあらし ハッサム ＋ かがくへんかガス
-    myDelay(5800);
+    if(this->symbol == SCIZOR){
+        // 12-11 すなあらし ハッサム ＋ かがくへんかガス
+        myDelay(5800);
+    }else if(this->symbol == KINGLER){
+        // 1/2 雨 キングラー + かがくへんかガス
+        myDelay(5400);
+    }else {
+        myDelay(5800);
+    }
+    
     
     myPush(Button::B, 200, 5);
 
