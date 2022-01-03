@@ -7,7 +7,7 @@ int target;
 
 void setup(){
     recogizeController();
-    target = LUXRAY;
+    target = LILLIGANT;
 }
 void loop(){
     switch (target) {
@@ -33,6 +33,12 @@ void loop(){
             {
                 YTanren10 luxray = YTanren10(target);
                 luxray.loop();
+            }
+            break;
+        case LILLIGANT:
+            {
+                YTanren10 lilligant = YTanren10(target);
+                lilligant.loop();
             }
             break;
             
