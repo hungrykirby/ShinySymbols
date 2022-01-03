@@ -1,9 +1,19 @@
+#include <auto_command_util.h>
 #include "modules.h"
+#include "y_tanren10.h"
+
+// ヨロイの孤島 鍛錬平原 固定シンボル10
+// ハッサム（砂嵐）など
+// https://yakkun.com/swsh/map.htm?place=tanren
 
 // 12/11 すなあらし
 
+YTanren10::YTanren10(int pokemon) {
+    this->symbol = pokemon;
+}
+
 // 移動パート①
-void moveToInitialPlayerPositionScizor(){
+void YTanren10::moveToInitialPlayerPosition(){
     openMap();
 
     myPushHatButton(Hat::UP_RIGHT, 60, BUTTON_PUSHING_MSEC);
@@ -15,7 +25,7 @@ void moveToInitialPlayerPositionScizor(){
 }
 
 //　移動パート②～戦闘パート
-void symbolEncountScizor(){
+void YTanren10::symbolEncount(){
 
     // ワット掘り出しおやじ付近
     myTiltJoystick(100, 0, 0, 0, 100, 30);
@@ -65,8 +75,8 @@ void symbolEncountScizor(){
     return;
 }
 
-void loopScizor() {
-    moveToInitialPlayerPositionScizor();
-    symbolEncountScizor();
+void YTanren10::loop() {
+    this->moveToInitialPlayerPosition();
+    this->symbolEncount();
     execTimeLeap();
 }

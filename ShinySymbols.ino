@@ -1,19 +1,29 @@
 #include <auto_command_util.h>
 #include "modules.h"
+#include "k_nedoko23.h"
+#include "y_tanren10.h"
 
-int pokemon = SCIZOR;
+int target;
 
 void setup(){
     recogizeController();
+    target = SCIZOR;
 }
 void loop(){
-    switch (pokemon) {
+    switch (target) {
         case SYLVEON:
-            loopSylveon();
+            {
+                KNedoko23 sylveon = KNedoko23(target);
+                sylveon.loop();
+            }
             break;
         case SCIZOR:
-            loopScizor();
+            {
+                YTanren10 scizor = YTanren10(target);
+                scizor.loop();
+            }
             break;
+            
     }
 
 }
