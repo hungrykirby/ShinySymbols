@@ -35,6 +35,7 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define LUXRAY 4
 #define LILLIGANT 5
 #define STOUTLAND 6
+#define WIGGLYTUFF 7
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 
