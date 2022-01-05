@@ -7,7 +7,7 @@ int target;
 
 void setup(){
     recogizeController();
-    target = LILLIGANT;
+    target = STOUTLAND;
 }
 void loop(){
     switch (target) {
@@ -39,6 +39,12 @@ void loop(){
             {
                 YTanren10 lilligant = YTanren10(target);
                 lilligant.loop();
+            }
+            break;
+        case STOUTLAND:
+            {
+                YTanren10 stoutland = YTanren10(target);
+                stoutland.loop();
             }
             break;
             
