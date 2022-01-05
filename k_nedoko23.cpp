@@ -1,7 +1,19 @@
+// カンムリ雪原 巨人の寝床 固定シンボル23
+// ニンフィア（霧）など
+// https://yakkun.com/swsh/map.htm?place=nedoko
+
 // 11/14 ブラッキー <- 違う
 
+#include <auto_command_util.h>
+#include "modules.h"
+#include "k_nedoko23.h"
+
+KNedoko23::KNedoko23(int pokemon){
+    this->symbol = pokemon;
+}
+
 // 移動パート①
-void moveToInitialPlayerPositionSylveon(){
+void KNedoko23::moveToInitialPlayerPosition(){
     openMap();
 
     myPushHatButton(Hat::UP_RIGHT, 110, BUTTON_PUSHING_MSEC);
@@ -14,7 +26,7 @@ void moveToInitialPlayerPositionSylveon(){
 }
 
 //　移動パート②～戦闘パート
-void symbolEncountSylveon(){
+void KNedoko23::symbolEncount(){
 
     // おじさんの位置から
     myTiltJoystick(-100, 0, 0, 0, 2500, 30);
@@ -90,8 +102,8 @@ void symbolEncountSylveon(){
     return;
 }
 
-void loopSylveon() {
-    moveToInitialPlayerPositionSylveon();
-    symbolEncountSylveon();
+void KNedoko23::loop() {
+    this->moveToInitialPlayerPosition();
+    this->symbolEncount();
     execTimeLeap();
 }

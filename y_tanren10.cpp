@@ -1,9 +1,19 @@
+#include <auto_command_util.h>
 #include "modules.h"
+#include "y_tanren10.h"
+
+// ヨロイの孤島 鍛錬平原 固定シンボル10
+// ハッサム（砂嵐）、キングラー（雨）など
+// https://yakkun.com/swsh/map.htm?place=tanren
 
 // 12/11 すなあらし
 
+YTanren10::YTanren10(int pokemon) {
+    this->symbol = pokemon;
+}
+
 // 移動パート①
-void moveToInitialPlayerPositionScizor(){
+void YTanren10::moveToInitialPlayerPosition(){
     openMap();
 
     myPushHatButton(Hat::UP_RIGHT, 60, BUTTON_PUSHING_MSEC);
@@ -15,7 +25,7 @@ void moveToInitialPlayerPositionScizor(){
 }
 
 //　移動パート②～戦闘パート
-void symbolEncountScizor(){
+void YTanren10::symbolEncount(){
 
     // ワット掘り出しおやじ付近
     myTiltJoystick(100, 0, 0, 0, 100, 30);
@@ -48,8 +58,26 @@ void symbolEncountScizor(){
     myPush(Button::A, 200, 2);
     myPush(Button::B, 200, 5);
 
-    // 12-11 すなあらし ハッサム ＋ かがくへんかガス
-    myDelay(5800);
+    if (this->symbol == SCIZOR) {
+        // 12-11 すなあらし ハッサム ＋ かがくへんかガス
+        myDelay(5800);
+    }else if (this->symbol == KINGLER || this->symbol == WIGGLYTUFF) {
+        // 1/2 雨 キングラー + かがくへんかガス
+        // 1/1 霧 プクリン + かがくへんかガス
+        myDelay(5400);
+    }else if (this->symbol == LILLIGANT) {
+        // 12/24 日照 ドレディア + かがくへんかガス
+        myDelay(5500);
+    }else if (this->symbol == LUXRAY) {
+        // 12/31 雷雨 レントラー + かがくへんかガス
+        myDelay(6500);
+    }else if (this->symbol == STOUTLAND) {
+        // 1/4 晴れ（なし） ムーランド + かがくへんかガス
+        myDelay(5000);
+    }else {
+        myDelay(5000);
+    }
+    
     
     myPush(Button::B, 200, 5);
 
@@ -65,8 +93,8 @@ void symbolEncountScizor(){
     return;
 }
 
-void loopScizor() {
-    moveToInitialPlayerPositionScizor();
-    symbolEncountScizor();
+void YTanren10::loop() {
+    this->moveToInitialPlayerPosition();
+    this->symbolEncount();
     execTimeLeap();
 }
