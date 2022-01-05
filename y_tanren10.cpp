@@ -70,8 +70,11 @@ void YTanren10::symbolEncount(){
     }else if (this->symbol == LUXRAY) {
         // 12/31 雷雨 レントラー + かがくへんかガス
         myDelay(6500);
+    }else if (this->symbol == STOUTLAND) {
+        // 1/4 晴れ（なし） ムーランド + かがくへんかガス
+        myDelay(5000);
     }else {
-        myDelay(5800);
+        myDelay(5000);
     }
     
     
