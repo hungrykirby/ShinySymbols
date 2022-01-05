@@ -61,8 +61,9 @@ void YTanren10::symbolEncount(){
     if (this->symbol == SCIZOR) {
         // 12-11 すなあらし ハッサム ＋ かがくへんかガス
         myDelay(5800);
-    }else if (this->symbol == KINGLER) {
+    }else if (this->symbol == KINGLER || this->symbol == WIGGLYTUFF) {
         // 1/2 雨 キングラー + かがくへんかガス
+        // 1/1 霧 プクリン + かがくへんかガス
         myDelay(5400);
     }else if (this->symbol == LILLIGANT) {
         // 12/24 日照 ドレディア + かがくへんかガス
