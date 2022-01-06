@@ -13,42 +13,20 @@ void loop(){
     switch (target) {
         case SYLVEON:
             {
-                KNedoko23 sylveon = KNedoko23(target);
-                sylveon.loop();
+                KNedoko23 pokemon = KNedoko23(target);
+                pokemon.loop();
             }
             break;
         case SCIZOR:
-            {
-                YTanren10 scizor = YTanren10(target);
-                scizor.loop();
-            }
-            break;
         case KINGLER:
-            {
-                YTanren10 kingler = YTanren10(target);
-                kingler.loop();
-            }
-            break;
         case LUXRAY:
-            {
-                YTanren10 luxray = YTanren10(target);
-                luxray.loop();
-            }
-            break;
         case LILLIGANT:
-            {
-                YTanren10 lilligant = YTanren10(target);
-                lilligant.loop();
-            }
-            break;
         case STOUTLAND:
-            {
-                YTanren10 stoutland = YTanren10(target);
-                stoutland.loop();
-            }
-            break;
         case WIGGLYTUFF:
-            {YTanren10 wigglytuff = YTanren10(target); wigglytuff.loop();}
+            {
+                YTanren10 pokemon = YTanren10(target);
+                pokemon.loop();
+            }
             break;
             
     }
