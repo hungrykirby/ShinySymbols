@@ -36,7 +36,7 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define LILLIGANT 5
 #define STOUTLAND 6
 #define WIGGLYTUFF 7
-#define ARON 8
+#define ARON_RAIU 8 // ココドラ（雷雨）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 

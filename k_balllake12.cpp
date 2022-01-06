@@ -27,31 +27,10 @@ void KBalllake12::symbolEncount(){
 
     myTiltJoystick(0, -100, 0, 0, 500, 30);
     myTiltJoystick(0, -100, -25, 0, 2200, 30);
-    // myTiltJoystick(0, -100, 0, 0, 3000, 30);
 
-    SwitchController().setStickTiltRatio(0, -100, 0, 0);
-    // myDelay(500);
-    /* SwitchController().pressButton(Button::B);
-    myDelay(BUTTON_PUSHING_MSEC);
-    SwitchController().releaseButton(Button::B);
-    myDelay(2800);*/
-    myDelay(4500);
-    SwitchController().setStickTiltRatio(0, 0, 0, 0);
-    myDelay(30);
+    myTiltJoystick(0, -100, 0, 0, 4500, 30);
 
-    // エンカウントできなかった際に遠ざかる
-    /*
-    for(int i = 0; i < 10; i++){
-        SwitchController().setStickTiltRatio(-100 + i*10, i*10, 0, 0);
-        myDelay(BUTTON_PUSHING_MSEC);
-    }
-    SwitchController().pressButton(Button::B);
-    myDelay(BUTTON_PUSHING_MSEC);
-    SwitchController().releaseButton(Button::B);
-    myDelay(1000);
-    SwitchController().setStickTiltRatio(0, 0, 0, 0);
-    myDelay(30);
-    */
+    // エンカウントできなかった場合、その位置から遠のく（洞窟に入る）
     SwitchController().setStickTiltRatio(0, -100, 0, 0);
     myDelay(BUTTON_PUSHING_MSEC);
     SwitchController().pressButton(Button::B);
@@ -64,8 +43,7 @@ void KBalllake12::symbolEncount(){
     myPush(Button::A, 200, 2);
     myPush(Button::B, 200, 5);
 
-    //  ＋ かがくへんかガス
-    myDelay(9000);
+    myDelay(this->convertToMSecFromPokemon());
     
     myPush(Button::B, 200, 5);
 
@@ -81,7 +59,7 @@ void KBalllake12::symbolEncount(){
 
     myDelay(200);
 
-    // 戦闘が終わった後遠ざかる
+    // 戦闘が終わった後遠ざかる（洞窟に入る）
     SwitchController().setStickTiltRatio(-50, -100, 0, 0);
     myDelay(BUTTON_PUSHING_MSEC);
     SwitchController().pressButton(Button::B);
@@ -91,6 +69,14 @@ void KBalllake12::symbolEncount(){
     SwitchController().setStickTiltRatio(0, 0, 0, 0);
 
     return;
+}
+
+int KBalllake12::convertToMSecFromPokemon() {
+    if (this->symbol == ARON_RAIU) {
+        // 雷雨（雨＋エレキフィールド） + ココドラ ＋ かがくへんかガス
+        return 9000;
+    }
+    return 9000;
 }
 
 void KBalllake12::loop() {

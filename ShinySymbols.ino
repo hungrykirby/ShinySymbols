@@ -8,7 +8,7 @@ int target;
 
 void setup(){
     recogizeController();
-    target = ARON;
+    target = ARON_RAIU;
 }
 void loop(){
     switch (target) {
@@ -51,7 +51,7 @@ void loop(){
         case WIGGLYTUFF:
             {YTanren10 wigglytuff = YTanren10(target); wigglytuff.loop();}
             break;
-        case ARON:
+        case ARON_RAIU:
             {KBalllake12 pokemon = KBalllake12(target); pokemon.loop();}
             break;
             
