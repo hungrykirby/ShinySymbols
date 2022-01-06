@@ -19,7 +19,6 @@ void KBalllake12::moveToInitialPlayerPosition(){
     myDelay(200);
     
     sky();
-    return;
 }
 
 //　移動パート②～戦闘パート
@@ -67,8 +66,6 @@ void KBalllake12::symbolEncount(){
     SwitchController().releaseButton(Button::B);
     myDelay(1300);
     SwitchController().setStickTiltRatio(0, 0, 0, 0);
-
-    return;
 }
 
 int KBalllake12::convertToMSecFromPokemon() {
