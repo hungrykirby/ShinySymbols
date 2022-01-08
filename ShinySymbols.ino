@@ -7,7 +7,7 @@ int target;
 
 void setup(){
     recogizeController();
-    target = WIGGLYTUFF;
+    target = setTarget(); // ポケモンの定数をreturnしているだけ
 }
 void loop(){
     switch (target) {
