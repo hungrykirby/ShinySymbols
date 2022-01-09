@@ -29,15 +29,6 @@ void loop(){
                 pokemon.loop();
             }
             break;
-<<<<<<< HEAD
-        case WIGGLYTUFF:
-            {YTanren10 wigglytuff = YTanren10(target); wigglytuff.loop();}
-            break;
-        case ARON_RAIU:
-            {KBalllake12 pokemon = KBalllake12(target); pokemon.loop();}
-            break;
-=======
->>>>>>> master
             
     }
 
