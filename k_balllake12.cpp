@@ -1,6 +1,11 @@
-// カンムリ雪原ボールレイクの湖畔 固定シンボル12
-// ココドラ
-// https://yakkun.com/swsh/map.htm?place=ball_lake
+/*
+ * カンムリ雪原ボールレイクの湖畔 固定シンボル12
+ * ココドラ
+ * https://yakkun.com/swsh/map.htm?place=ball_lake
+ * 
+ * （注意）湖畔の洞窟にいる状態で始めてください
+ * 
+ */
 
 #include <auto_command_util.h>
 #include "modules.h"
@@ -11,6 +16,7 @@ KBalllake12::KBalllake12(int pokemon) {
 }
 
 // 移動パート①
+// 湖畔の洞窟 -> ダイ木の丘
 void KBalllake12::moveToInitialPlayerPosition(){
     openMap();
 
