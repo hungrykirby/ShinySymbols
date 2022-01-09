@@ -29,6 +29,12 @@ void loop(){
                 pokemon.loop();
             }
             break;
+        case ARON_RAIU:
+            {
+                KBalllake12 pokemon = KBalllake12(target);
+                pokemon.loop();
+            }
+            break;
             
     }
 
