@@ -85,8 +85,7 @@ void KNedoko23::symbolEncount(){
     myPush(Button::A, 200, 2);
     myPush(Button::B, 200, 5);
 
-    // 11-10 霧 (ミストフィールド) ニンフィア ＋ かがくへんかガス
-    myDelay(6000);
+    myDelay(this->convertToMSecFromPokemon());
     
     myPush(Button::B, 200, 5);
 
@@ -100,6 +99,17 @@ void KNedoko23::symbolEncount(){
     myPush(Button::A, 800, 2);
     myPush(Button::B, 100, 5);
     return;
+}
+
+int KNedoko23::convertToMSecFromPokemon() {
+    if (this->symbol == ARAQUANID) {
+        // 1/4 雨 オニシズクモ ＋ かがくへんかガス
+        return 6000;
+    } else if (this->symbol == SYLVEON) {
+        // 11-10 霧 (ミストフィールド) ニンフィア ＋ かがくへんかガス
+        return 6000;
+    }
+    return 5000;
 }
 
 void KNedoko23::loop() {
