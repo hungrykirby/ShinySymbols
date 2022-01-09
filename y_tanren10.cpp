@@ -6,8 +6,6 @@
 // ハッサム（砂嵐）、キングラー（雨）など
 // https://yakkun.com/swsh/map.htm?place=tanren
 
-// 12/11 すなあらし
-
 YTanren10::YTanren10(int pokemon) {
     this->symbol = pokemon;
 }
@@ -21,7 +19,6 @@ void YTanren10::moveToInitialPlayerPosition(){
     myDelay(200);
     
     sky();
-    return;
 }
 
 //　移動パート②～戦闘パート
@@ -58,26 +55,7 @@ void YTanren10::symbolEncount(){
     myPush(Button::A, 200, 2);
     myPush(Button::B, 200, 5);
 
-    if (this->symbol == SCIZOR) {
-        // 12-11 すなあらし ハッサム ＋ かがくへんかガス
-        myDelay(5800);
-    }else if (this->symbol == KINGLER || this->symbol == WIGGLYTUFF) {
-        // 1/2 雨 キングラー + かがくへんかガス
-        // 1/1 霧 プクリン + かがくへんかガス
-        myDelay(5400);
-    }else if (this->symbol == LILLIGANT) {
-        // 12/24 日照 ドレディア + かがくへんかガス
-        myDelay(5500);
-    }else if (this->symbol == LUXRAY) {
-        // 12/31 雷雨 レントラー + かがくへんかガス
-        myDelay(6500);
-    }else if (this->symbol == STOUTLAND) {
-        // 1/4 晴れ（なし） ムーランド + かがくへんかガス
-        myDelay(5000);
-    }else {
-        myDelay(5000);
-    }
-    
+    myDelay(this->convertToMSecFromPokemon());
     
     myPush(Button::B, 200, 5);
 
@@ -90,7 +68,29 @@ void YTanren10::symbolEncount(){
     myPushHatButton(Hat::UP, 1500, BUTTON_PUSHING_MSEC);
     myPush(Button::A, 800, 2);
     myPush(Button::B, 100, 5);
-    return;
+}
+
+int YTanren10::convertToMSecFromPokemon() {
+    if (this->symbol == SCIZOR) {
+        // 12-11 すなあらし ハッサム ＋ かがくへんかガス
+        return 5800;
+    } else if (this->symbol == KINGLER || this->symbol == WIGGLYTUFF) {
+        // 1/2 雨 キングラー + かがくへんかガス
+        // 1/1 霧 プクリン + かがくへんかガス
+        return 5400;
+    } else if (this->symbol == LILLIGANT) {
+        // 12/24 日照 ドレディア + かがくへんかガス
+        return 5500;
+    } else if (this->symbol == LUXRAY) {
+        // 12/31 雷雨 レントラー + かがくへんかガス
+        return 6500;
+    } else if (this->symbol == STOUTLAND) {
+        // 1/4 晴れ（なし） ムーランド + かがくへんかガス
+        return 5000;
+    } else {
+        return 5000;
+    }
+    return 0;
 }
 
 void YTanren10::loop() {

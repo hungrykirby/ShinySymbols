@@ -9,6 +9,7 @@ public:
 private:
     void moveToInitialPlayerPosition();
     void symbolEncount();
+    int convertToMSecFromPokemon();
     int symbol;
 };
 
