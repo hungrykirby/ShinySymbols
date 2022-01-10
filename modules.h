@@ -40,7 +40,7 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define ARAQUANID 9 // オニシズクモ
 #define DRAGAPULT_AME 10
 #define ELECTIVIRE 11
-#define NIDOKING 12 // ニドキング
+#define NIDOKING_NEDOKO23 12 // ニドキング
 #define JOLTEON 13 // サンダース
 
 const int TIME_LEAP_MODE = RANKBATTLE;
