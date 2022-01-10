@@ -3,6 +3,7 @@
 #include "k_nedoko23.h"
 #include "y_tanren10.h"
 #include "k_balllake12.h"
+#include "k_mitsumata2.h"
 
 int target;
 
@@ -33,6 +34,13 @@ void loop(){
         case ARON_RAIU:
             {
                 KBalllake12 pokemon = KBalllake12(target);
+                pokemon.loop();
+            }
+            break;
+        case DRAGAPULT_AME:
+        case ELECTIVIRE:
+            {
+                KMitsumata2 pokemon = KMitsumata2(target);
                 pokemon.loop();
             }
             break;
