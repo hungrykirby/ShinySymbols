@@ -55,7 +55,7 @@ int KMitsumata2::convertToMSecFromPokemon() {
         return 5000;
     } else if (this->symbol == ELECTIVIRE) {
         // --/-- 雷雨 エレキブル + かがくへんかガス
-        return 5700;
+        return 5500;
     }
     return 1500;
 }
