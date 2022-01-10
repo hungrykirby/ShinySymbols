@@ -102,13 +102,18 @@ void KNedoko23::symbolEncount(){
 }
 
 int KNedoko23::convertToMSecFromPokemon() {
-    if (this->symbol == ARAQUANID) {
+    if (this->symbol == ARAQUANID || this->symbol == NIDOKING) {
         // 1/4 雨 オニシズクモ ＋ かがくへんかガス
+        // 1/5 雪 ニドキング + かがくへんかガス
         return 6000;
     } else if (this->symbol == SYLVEON) {
         // 11-10 霧 (ミストフィールド) ニンフィア ＋ かがくへんかガス
         return 6000;
+    } else if (this->symbol == JOLTEON) {
+        // --/-- 雷雨 サンダース + かがくへんかガス
+        return 6500;
     }
+    
     return 5000;
 }
 

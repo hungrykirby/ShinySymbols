@@ -15,6 +15,8 @@ void loop(){
     switch (target) {
         case SYLVEON:
         case ARAQUANID:
+        case NIDOKING:
+        case JOLTEON:
             {
                 KNedoko23 pokemon = KNedoko23(target);
                 pokemon.loop();
