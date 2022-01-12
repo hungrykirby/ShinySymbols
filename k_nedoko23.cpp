@@ -108,7 +108,14 @@ int KNedoko23::convertToMSecFromPokemon() {
     } else if (this->symbol == SYLVEON) {
         // 11-10 霧 (ミストフィールド) ニンフィア ＋ かがくへんかガス
         return 6000;
+    } else if (this->symbol == NIDOKING_NEDOKO23) {
+        // 1/5 雪 ニドキング + かがくへんかガス
+        return 5800;
+    } else if (this->symbol == JOLTEON) {
+        // --/-- 雷雨 サンダース + かがくへんかガス
+        return 6500;
     }
+    
     return 5000;
 }
 
