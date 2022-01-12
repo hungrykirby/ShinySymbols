@@ -16,7 +16,7 @@ void loop(){
         case SYLVEON:
         case ARAQUANID:
         case NIDOKING_NEDOKO23:
-        case JOLTEON:
+        case JOLTEON: // オニシズクモが飛び出してくるため精度が低い。ループ破綻はしない。
             {
                 KNedoko23 pokemon = KNedoko23(target);
                 pokemon.loop();
