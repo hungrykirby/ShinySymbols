@@ -28,6 +28,7 @@ void loop(){
         case LILLIGANT:
         case STOUTLAND:
         case WIGGLYTUFF:
+        case BISHARP:
             {
                 YTanren10 pokemon = YTanren10(target);
                 pokemon.loop();
