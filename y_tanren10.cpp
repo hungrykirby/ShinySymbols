@@ -87,6 +87,9 @@ int YTanren10::convertToMSecFromPokemon() {
     } else if (this->symbol == STOUTLAND) {
         // 1/4 晴れ（なし） ムーランド + かがくへんかガス
         return 5000;
+    } else if (this->symbol == BISHARP) {
+        // 1/16 曇り（なし） キリキザン + かがくへんかガス
+        return 5000;
     } else {
         return 5000;
     }
