@@ -4,6 +4,7 @@
 #include "y_tanren10.h"
 #include "k_balllake12.h"
 #include "k_mitsumata2.h"
+#include "k_nedoko26.h"
 
 int target;
 
@@ -44,6 +45,12 @@ void loop(){
         case ELECTIVIRE:
             {
                 KMitsumata2 pokemon = KMitsumata2(target);
+                pokemon.loop();
+            }
+            break;
+        case UMBREON:
+            {
+                KNedoko26 pokemon = KNedoko26(target);
                 pokemon.loop();
             }
             break;

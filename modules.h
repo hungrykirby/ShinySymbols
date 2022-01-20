@@ -43,6 +43,7 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define NIDOKING_NEDOKO23 12 // ニドキング
 #define JOLTEON 13 // サンダース
 #define BISHARP 14 // キリキザン
+#define UMBREON 15 // ブラッキー
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 
