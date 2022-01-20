@@ -1,4 +1,4 @@
-// カンムリ雪原 巨人の寝床 固定シンボル23
+// カンムリ雪原 巨人の寝床 固定シンボル26
 // ブラッキー（曇り）など
 // https://yakkun.com/swsh/map.htm?place=nedoko
 
