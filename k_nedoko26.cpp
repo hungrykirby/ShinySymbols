@@ -32,14 +32,14 @@ void KNedoko26::symbolEncount() {
 
     SwitchController().setStickTiltRatio(47, -100, 0, 0);
     myDelay(500);
-    // SwitchController().setStickTiltRatio(4, -100, 0, 0);
-    // myPushButton(Button::B, BUTTON_PUSHING_MSEC, 50);
-    // SwitchController().setStickTiltRatio(50, -100, 0, 0)
 
     myPush(Button::LCLICK, BUTTON_PUSHING_MSEC, 15);
     myDelay(2000);
-    // myPush(Button::LCLICK, BUTTON_PUSHING_MSEC, 15);
+
+    // エンカウントできなかった場合に遠ざかる
     myPushButton(Button::B, BUTTON_PUSHING_MSEC, 50);
+    myDelay(1000);
+
     SwitchController().setStickTiltRatio(0, 0, 0, 0);
     myDelay(100);
 
@@ -64,7 +64,7 @@ void KNedoko26::symbolEncount() {
 
 int KNedoko26::convertToMSecFromPokemon() {
     if (this->symbol == UMBREON) {
-        return 5000;
+        return 4000;
     }
     return 5000;
 }
