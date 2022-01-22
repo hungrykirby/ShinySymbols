@@ -65,8 +65,18 @@ void KNedoko26::symbolEncount() {
 int KNedoko26::convertToMSecFromPokemon() {
     if (this->symbol == UMBREON) {
         return 4000;
+    } else if (this->symbol == NIDORINA) {
+        return 4500;
+    } else if (this->symbol == ELECTABUZZ) {
+        return 5500;
+    } else if (this->symbol == HEATMOR) {
+        return 4500;
+    } else if (this->symbol == CRYOGONAL) {
+        return 4500;
+    } else if (this->symbol == LEAFEON) {
+        return 4000;
     }
-    return 5000;
+    return 4500;
 }
 
 void KNedoko26::loop() {

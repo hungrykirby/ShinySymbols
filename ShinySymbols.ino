@@ -49,6 +49,11 @@ void loop(){
             }
             break;
         case UMBREON:
+        case NIDORINA:
+        case ELECTABUZZ:
+        case HEATMOR:
+        case CRYOGONAL:
+        case LEAFEON:
             {
                 KNedoko26 pokemon = KNedoko26(target);
                 pokemon.loop();
