@@ -8,5 +8,5 @@
 
 // return: int
 int setTarget(){
-    return ELECTABUZZ;
+    return CRYOGONAL;
 }

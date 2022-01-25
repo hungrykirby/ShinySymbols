@@ -54,7 +54,7 @@ void KNedoko26::symbolEncount() {
     // 戦闘開始、色違い光モーションなければ十字上＞逃げる
     // 色違いならば、1つめの上入力間に合わないため戦闘＞自爆技で自分側瀕死
     // Aボタンを2回以上連続して押す場合は、次のポケモン選択画面で一番上以外のポケモンを繰り出さないようにする
-    myPushHatButton(Hat::UP, BUTTON_PUSHING_MSEC, 1000);
+    myPushHatButton(Hat::UP, BUTTON_PUSHING_MSEC, 2500);
     myPushButton(Button::A, BUTTON_PUSHING_MSEC, 800);
     myPush(Button::B, 400, 2);
     myPushHatButton(Hat::UP, 1500, BUTTON_PUSHING_MSEC);
