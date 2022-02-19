@@ -62,6 +62,7 @@ void loop(){
             break;
         case NIDOKING_NEDOKO43:
         case GRIMMSNARL:
+        case NIDOQUEEN_NEDOKO43:
             {
                 KNedoko43 pokemon = KNedoko43(target);
                 pokemon.loop();

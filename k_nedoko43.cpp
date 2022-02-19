@@ -52,6 +52,9 @@ int KNedoko43::convertToMSecFromPokemon() {
     } else if (this->symbol == GRIMMSNARL) {
         // 1/17 霧 オーロンゲ + かがくへんかガス
         return 6500;
+    } else if (this->symbol == NIDOQUEEN_NEDOKO43) {
+        // 1/15 日照 ニドクイン + かがくへんかガス
+        return 6000;
     }
     return 1500;
 }
