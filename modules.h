@@ -49,6 +49,9 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define HEATMOR 18 // クイタラン（日照）
 #define CRYOGONAL 19 // フリージオ（雪）
 #define LEAFEON 20 // リーフィア（晴れ）
+#define NIDOKING_NEDOKO43 21 // ニドキング（雨）
+#define GRIMMSNARL 22 // オーロンゲ
+#define NIDOQUEEN_NEDOKO43 23 // ニドクイン（日照）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 

@@ -5,6 +5,7 @@
 #include "k_balllake12.h"
 #include "k_mitsumata2.h"
 #include "k_nedoko26.h"
+#include "k_nedoko43.h"
 
 int target;
 
@@ -56,6 +57,14 @@ void loop(){
         case LEAFEON:
             {
                 KNedoko26 pokemon = KNedoko26(target);
+                pokemon.loop();
+            }
+            break;
+        case NIDOKING_NEDOKO43:
+        case GRIMMSNARL:
+        case NIDOQUEEN_NEDOKO43:
+            {
+                KNedoko43 pokemon = KNedoko43(target);
                 pokemon.loop();
             }
             break;
