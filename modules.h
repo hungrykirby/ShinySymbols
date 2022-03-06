@@ -52,6 +52,14 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define NIDOKING_NEDOKO43 21 // ニドキング（雨）
 #define GRIMMSNARL 22 // オーロンゲ
 #define NIDOQUEEN_NEDOKO43 23 // ニドクイン（日照）
+#define GALVANTULA 24 // デンチュラ（寝床28 雷雨）
+#define GLALIE 25 // オニゴーリ（寝床28 雪）
+#define ALTARIA 26 // チルタリス（寝床28 曇り）
+#define BRONZONG 27 // ドータクン（寝床28 雨）
+#define ABSOL 28 // アブソル（寝床28 吹雪）
+#define DUBWOOL 29 // バイウールー（寝床28 晴れ）
+#define DURANT 30 // アイアント（寝床28 日照）
+#define CLEFABLE 31 // ピクシー（寝床28 霧）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 
