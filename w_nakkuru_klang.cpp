@@ -20,10 +20,10 @@ void WNakkuruKlang::moveToInitialPlayerPosition() {
 }
 
 void WNakkuruKlang::symbolEncount() {
-    myDelay(200);
-    myTiltJoystick(0, 0, 100, 0, 930, 100);
     myDelay(300);
-    myTiltJoystick(0, -100, 0, 0, 3000, 100);
+    myTiltJoystick(0, 0, 100, 0, 930, 100);
+    myDelay(400);
+    myTiltJoystick(0, -100, 0, 0, 3000, 200);
 
     SwitchController().setStickTiltRatio(0, -100, 0, 0);
     myPush(Button::B, 100);
@@ -43,7 +43,7 @@ void WNakkuruKlang::symbolEncount() {
     myPush(Button::A, 200, 2);
     myPush(Button::B, 200, 5);
     // ガラルマタドガス（かがくへんか）がいると特性が発動しないため精度が上がる。
-    myDelay(this->convertToMSecFromPokemon()); // 天候とフィールドなしのギギアル、ギギアルの動きが大きいので比較的ここに余裕を持たせないときつい
+    myDelay(this->convertToMSecFromPokemon());
     myPush(Button::B, 200, 5);
 
     // 戦闘開始、色違い光モーションなければ十字上＞逃げる
@@ -58,12 +58,14 @@ void WNakkuruKlang::symbolEncount() {
 }
 
 int WNakkuruKlang::convertToMSecFromPokemon() {
+    //ギギアルの動きが大きいので比較的ここに余裕を持たせないときつい
+    // 少し余裕目のほうがいい
     if (this->symbol == 0) {
-        // 雨＋エレキフィールド＋かがくへんかガス
-        return 4200;
+        // かがくへんかガス
+        return 4500;
     } else if (this->symbol == KLANG_DROUGHT) {
         // 日照り＋かがくへんかガス
-        return 5000;
+        return 5500;
     }
     return 4500;
 }
