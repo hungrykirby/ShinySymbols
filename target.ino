@@ -8,5 +8,5 @@
 
 // return: int
 int setTarget(){
-    return CLEFABLE;
+    return GLALIE;
 }
