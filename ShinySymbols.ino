@@ -7,6 +7,7 @@
 #include "k_nedoko26.h"
 #include "k_nedoko43.h"
 #include "k_nedoko28.h"
+#include "w_nakkuru_klang.h"
 
 int target;
 
@@ -79,6 +80,13 @@ void loop(){
         case CLEFABLE:
             {
                 KNedoko28 pokemon = KNedoko28(target);
+                pokemon.loop();
+            }
+            break;
+        case KLANG_DROUGHT:
+        case KLANG_SUNNY:
+            {
+                WNakkuruKlang pokemon = WNakkuruKlang(target);
                 pokemon.loop();
             }
             break;

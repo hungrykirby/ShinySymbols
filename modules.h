@@ -60,6 +60,8 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define DUBWOOL 29 // バイウールー（寝床28 晴れ）
 #define DURANT 30 // アイアント（寝床28 日照）
 #define CLEFABLE 31 // ピクシー（寝床28 霧）
+#define KLANG_DROUGHT 32 // 32 ギギギアル（ナックル丘陵 日照）注： kling はギギアル
+#define KLANG_SUNNY 33 // ギギアル（ナックル丘陵 晴れ）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 

@@ -8,5 +8,5 @@
 
 // return: int
 int setTarget(){
-    return GLALIE;
+    return KLANG_SUNNY;
 }
