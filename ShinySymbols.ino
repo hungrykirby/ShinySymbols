@@ -84,6 +84,7 @@ void loop(){
             }
             break;
         case KLANG_DROUGHT:
+        case KLANG_SUNNY:
             {
                 WNakkuruKlang pokemon = WNakkuruKlang(target);
                 pokemon.loop();

@@ -8,5 +8,5 @@
 
 // return: int
 int setTarget(){
-    return KLANG_DROUGHT;
+    return KLANG_SUNNY;
 }

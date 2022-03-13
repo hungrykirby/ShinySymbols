@@ -59,13 +59,12 @@ void WNakkuruKlang::symbolEncount() {
 
 int WNakkuruKlang::convertToMSecFromPokemon() {
     //ギギアルの動きが大きいので比較的ここに余裕を持たせないときつい
-    // 少し余裕目のほうがいい
-    if (this->symbol == 0) {
+    if (this->symbol == KLANG_SUNNY) {
         // かがくへんかガス
-        return 4500;
+        return 5500;
     } else if (this->symbol == KLANG_DROUGHT) {
         // 日照り＋かがくへんかガス
-        return 5500;
+        return 6000;
     }
     return 4500;
 }
