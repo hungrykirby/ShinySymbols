@@ -8,5 +8,5 @@
 
 // return: int
 int setTarget(){
-    return KLANG_SUNNY;
+    return DRAGAPULT_AME;
 }
