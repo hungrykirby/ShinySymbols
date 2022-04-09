@@ -62,6 +62,12 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define CLEFABLE 31 // ピクシー（寝床28 霧）
 #define KLANG_DROUGHT 32 // 32 ギギギアル（ナックル丘陵 日照）注： kling はギギアル
 #define KLANG_SUNNY 33 // ギギアル（ナックル丘陵 晴れ）
+#define MAMOSWINE 34 // マンムー （滑り出し雪原12 日照）
+#define GLALIE_SUBERIDASHI 35 // オニゴーリ（滑り出し雪原12 吹雪）
+#define SNORLAX 36 // カビゴン （滑り出し雪原12 晴れ）
+#define JYNX 37 // ルージュラ （滑り出し雪原12 霧）
+#define CRYOGONAL_SUBERIDASHI 38 // フリージオ（滑り出し雪原12 雪）
+#define WEAVILE 39 // マニューラ（滑り出し雪原12 曇り）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 
