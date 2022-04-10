@@ -68,6 +68,7 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define JYNX 37 // ルージュラ （滑り出し雪原12 霧）
 #define CRYOGONAL_SUBERIDASHI 38 // フリージオ（滑り出し雪原12 雪）
 #define WEAVILE 39 // マニューラ（滑り出し雪原12 曇り）
+#define FLOSLASS 40 // ユキメノコ （滑り出し雪原8 吹雪）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 
