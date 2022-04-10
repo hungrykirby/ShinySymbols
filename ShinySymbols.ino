@@ -8,6 +8,8 @@
 #include "k_nedoko43.h"
 #include "k_nedoko28.h"
 #include "w_nakkuru_klang.h"
+#include "k_suberidashi12.h"
+#include "k_suberidashi8.h"
 
 int target;
 
@@ -87,6 +89,23 @@ void loop(){
         case KLANG_SUNNY:
             {
                 WNakkuruKlang pokemon = WNakkuruKlang(target);
+                pokemon.loop();
+            }
+            break;
+        case MAMOSWINE:
+        case GLALIE_SUBERIDASHI:
+        case SNORLAX:
+        case JYNX:
+        case CRYOGONAL_SUBERIDASHI:
+        case WEAVILE:
+            {
+                KSuberidashi12 pokemon = KSuberidashi12(target);
+                pokemon.loop();
+            }
+            break;
+        case FLOSLASS:
+            {
+                KSuberidashi8 pokemon = KSuberidashi8(target);
                 pokemon.loop();
             }
             break;
