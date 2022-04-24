@@ -104,6 +104,10 @@ void loop(){
             }
             break;
         case FLOSLASS:
+        case MAGMORTAR:
+        case SNOM:
+        case HATENNA:
+        case AMAURA:
             {
                 KSuberidashi8 pokemon = KSuberidashi8(target);
                 pokemon.loop();
