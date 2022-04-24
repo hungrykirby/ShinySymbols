@@ -4,7 +4,7 @@
 
 /*
  * カンムリ雪原滑り出し雪原 固定シンボル8
- * ユキメノコ
+ * ユキメノコ、ブーバーン
  * https://yakkun.com/swsh/map.htm?place=suberidashi
  * 
  */
@@ -64,6 +64,14 @@ void KSuberidashi8::symbolEncount() {
 int KSuberidashi8::convertToMSecFromPokemon() {
     if (this->symbol == FLOSLASS) {
         return 4500;
+    } else if (this->symbol == MAGMORTAR) {
+        return 4000;
+    } else if (this->symbol == SNOM) {
+        return 3000;
+    } else if (this->symbol == HATENNA) {
+        return 3500;
+    } else if (this->symbol == AMAURA) {
+        return 3800;
     }
     return 4500;
 }
