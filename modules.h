@@ -78,6 +78,13 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define FLETCHINDER 47 // ヒノヤコマ （鍛錬平原4 日照）
 #define SKARMORY 48 // エアームド（鍛錬平原4 砂嵐）
 #define DRIFBLIM 49 // フワライド（鍛錬平原4 霧）
+#define COMFEY 50 // キュワワー（鍛錬平原3 霧）
+#define CRUSTLE 51 // イワパレス（鍛錬平原3 砂嵐）
+#define KANGASKHAN 52 // ガルーラ（鍛錬平原3 晴れ）
+#define DRAPION 53 // ドラピオン（鍛錬平原3 曇り）
+#define PELIPPER 54 // ペリッパー（鍛錬平原3 雨）
+#define LUXIO 55 // ルクシオ（鍛錬平原3 雷雨）
+#define SCYTHER 56 // ストライク（鍛錬平原3 日照）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 
