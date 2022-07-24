@@ -139,6 +139,8 @@ int YTanren4::convertToMSecFromPokemon() {
         return 2000;
     } else if (this->symbol == SKARMORY) {
         return 4500;
+    } else if (this->symbol == DRIFBLIM) {
+        return 9000;
     }
     return 0;
 }

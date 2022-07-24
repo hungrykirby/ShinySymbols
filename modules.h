@@ -77,6 +77,7 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define SWOOBAT 46 // ココロモリ （鍛錬平原4 曇り）
 #define FLETCHINDER 47 // ヒノヤコマ （鍛錬平原4 日照）
 #define SKARMORY 48 // エアームド（鍛錬平原4 砂嵐）
+#define DRIFBLIM 49 // フワライド（鍛錬平原4 霧）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 

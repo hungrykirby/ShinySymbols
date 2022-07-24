@@ -118,6 +118,7 @@ void loop(){
         case SWOOBAT:
         case FLETCHINDER:
         case SKARMORY:
+        case DRIFBLIM:
             {
                 YTanren4 p = YTanren4(target);
                 p.loop();
