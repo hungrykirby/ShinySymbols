@@ -10,6 +10,7 @@
 #include "w_nakkuru_klang.h"
 #include "k_suberidashi12.h"
 #include "k_suberidashi8.h"
+#include "y_tanren4.h"
 
 int target;
 
@@ -111,6 +112,15 @@ void loop(){
             {
                 KSuberidashi8 pokemon = KSuberidashi8(target);
                 pokemon.loop();
+            }
+            break;
+        case MAGNETON:
+        case SWOOBAT:
+        case FLETCHINDER:
+        case SKARMORY:
+            {
+                YTanren4 p = YTanren4(target);
+                p.loop();
             }
             break;
             

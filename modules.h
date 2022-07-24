@@ -73,6 +73,10 @@ TIME_LEAP_MODE は時渡りバグを使うときの方法
 #define SNOM 42 // ユキハミ （滑り出し雪原8 晴れ）
 #define HATENNA 43 // テブリム （滑り出し雪原8 霧）
 #define AMAURA 44 // アマルス （滑り出し雪原8 雪）
+#define MAGNETON 45 // レアコイル （鍛錬平原4 雷雨）
+#define SWOOBAT 46 // ココロモリ （鍛錬平原4 曇り）
+#define FLETCHINDER 47 // ヒノヤコマ （鍛錬平原4 日照）
+#define SKARMORY 48 // エアームド（鍛錬平原4 砂嵐）
 
 const int TIME_LEAP_MODE = RANKBATTLE;
 
