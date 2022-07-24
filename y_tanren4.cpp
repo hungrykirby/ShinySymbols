@@ -62,7 +62,36 @@ void YTanren4::symbolEncount(){
     myDelay(100);
     SwitchController().setStickTiltRatio(0, 0, 0, 0);
 
-    myPush(Button::LCLICK, 200, 30);
+    
+    if (this->symbol == SWOOBAT) {
+        // ココロモリが画面から消えてしまう
+        SwitchController().setStickTiltRatio(0, 0, 0, 1);
+        myPush(Button::LCLICK, 200, 25);
+        SwitchController().setStickTiltRatio(0, -100, 0, 0);
+        myDelay(100);
+        SwitchController().setStickTiltRatio(0, 0, 0, 0);
+    } else if (this->symbol == SKARMORY) {
+        myPush(Button::LCLICK, 200, 10);
+        for (int i = 0; i < 15; i++) {
+            // 小刻みに動く
+            int mx = 8;
+            int my = 8;
+            if (i % 2 == 0) {
+                mx = -1 * mx;
+                my = -1 * my;
+            }
+            SwitchController().setStickTiltRatio(mx, my, 0, 0);
+            myDelay(100);
+            SwitchController().pressButton(Button::LCLICK);
+            myDelay(BUTTON_PUSHING_MSEC);
+            SwitchController().releaseButton(Button::LCLICK);
+            myDelay(BUTTON_PUSHING_MSEC);
+            SwitchController().setStickTiltRatio(0, 0, 0, 0);
+            myDelay(100);
+        }
+    } else {
+        myPush(Button::LCLICK, 200, 30);
+    }
 
     myDelay(100);
 
@@ -104,8 +133,12 @@ void YTanren4::symbolEncount(){
 int YTanren4::convertToMSecFromPokemon() {
     if (this->symbol == MAGNETON) {
         return 6000;
-    } else if (this->symbol == 0) {
-        return 5400;
+    } else if (this->symbol == SWOOBAT) {
+        return 4500;
+    } else if (this->symbol == FLETCHINDER) {
+        return 2000;
+    } else if (this->symbol == SKARMORY) {
+        return 4500;
     }
     return 0;
 }
