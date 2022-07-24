@@ -133,17 +133,12 @@ void YTanren4::symbolEncount(){
 int YTanren4::convertToMSecFromPokemon() {
     if (this->symbol == MAGNETON) {
         return 6000;
-<<<<<<< HEAD
-    } else if (this->symbol == 0) {
-        return 5400;
-=======
     } else if (this->symbol == SWOOBAT) {
         return 4500;
     } else if (this->symbol == FLETCHINDER) {
         return 2000;
     } else if (this->symbol == SKARMORY) {
         return 4500;
->>>>>>> 4c09c04063b1f6b34a82d05ecf707ee394b0b42b
     }
     return 0;
 }
