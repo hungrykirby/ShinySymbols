@@ -11,6 +11,7 @@
 #include "k_suberidashi12.h"
 #include "k_suberidashi8.h"
 #include "y_tanren4.h"
+#include "y_tanren3.h"
 
 int target;
 
@@ -121,6 +122,18 @@ void loop(){
         case DRIFBLIM:
             {
                 YTanren4 p = YTanren4(target);
+                p.loop();
+            }
+            break;
+        case COMFEY:
+        case CRUSTLE:
+        case LUXIO:
+        case SCYTHER:
+        case KANGASKHAN:
+        case DRAPION:
+        case PELIPPER:
+            {
+                YTanren3 p = YTanren3(target);
                 p.loop();
             }
             break;
